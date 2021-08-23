@@ -33,9 +33,8 @@ if(parseFloat(prevTotalBill) < parseFloat(warningLevelSetting)) totalElem.classL
 //add an event listener for when the add button is pressed
 addButton.addEventListener("click", function(){
     var checkedBtn = document.querySelector("input[name='billItemTypeWithSettings']:checked");
-    alert(checkedBtn.value);
-    if (checkedRadioBtn){
-        var billItemType = checkedRadioBtn.value
+    if(checkedBtn){
+        var billItemType = checkedBtn.value
         // billItemType will be 'call' or 'sms'
         if(billItemType==="call"){
             callTotal+=parseFloat(callCostSetting);
